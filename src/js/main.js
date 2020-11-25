@@ -76,6 +76,7 @@ function generateURL(id) {
 
 findVideos();
 
+// Animate navigation
 (function (){
     const body = document.querySelector('body');
     const burger = document.getElementById('burger');
@@ -92,7 +93,6 @@ findVideos();
             body.classList.add('js-lock');
 
             navLinks.forEach((link, index) => {
-                console.log('open', index)
                 if (!link.style.animation) {
                     link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`
                 }
@@ -110,7 +110,6 @@ findVideos();
             body.classList.remove('js-lock');
 
             navLinks.forEach((link, index) => {
-                console.log('close', index)
                 if (link.style.animation) {
                     link.style.animation = '';
                 }
@@ -119,12 +118,4 @@ findVideos();
             return
         }
     }
-
-    navLinks.forEach((link, index) => {
-        if (link.style.animation) {
-            link.style.animation = '';
-        } else {
-            link.style.animation = `navLinkFade .5s ease forward ${index / 7 + 0.3}s`
-        }
-    })
 })()

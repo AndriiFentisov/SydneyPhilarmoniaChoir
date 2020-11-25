@@ -333,8 +333,12 @@ img.lazyload:not([src]) {
     }
   }
   @media (min-width: 1024px) {
+    position: static;
+    max-width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
+    padding: 0;
     transform: translateX(0%);
     .close-btn {
       display: none;
