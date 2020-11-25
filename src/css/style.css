@@ -1280,7 +1280,6 @@ img.lazyload:not([src]) {
 /* burger menu */
 
 .burger-menu {
-  display: block;
   margin-left: 20px;
 }
 
@@ -2461,6 +2460,13 @@ img.lazyload:not([src]) {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+
+  .navigation .close-btn {
+    display: none;
   }
 
   .menu {

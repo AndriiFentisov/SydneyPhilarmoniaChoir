@@ -335,6 +335,10 @@ img.lazyload:not([src]) {
   @media (min-width: 1024px) {
     display: flex;
     justify-content: center;
+    transform: translateX(0%);
+    .close-btn {
+      display: none;
+    }
   }
 }
 
@@ -382,7 +386,6 @@ img.lazyload:not([src]) {
 
 /* burger menu */
 .burger-menu {
-  display: block;
   margin-left: 20px;
   @media (min-width: 1024px) {
     display: none;
